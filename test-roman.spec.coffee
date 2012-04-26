@@ -6,8 +6,12 @@ describe 'What have the Romans done for us?', ->
     try
       roman = new Roman 0
       expect(true).toBeFalsy()
-    catch error  
+    catch error
       expect(error.message).toEqual "Romans go home!"
+  it '2 should be II', ->
+    roman = new Roman 2
+    expect(roman.numeral).toEqual 'II'
+
 
 class Roman
   constructor: (number) ->
