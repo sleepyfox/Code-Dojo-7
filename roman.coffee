@@ -1,10 +1,21 @@
 class Roman
-  numerals = { 10:'X', 9:'IX', 8:'VIII', 7:'VII', 6:'VI', 5:'V', 4:'IV', 3:'III', 2:'II', 1:'I' }
+  numerals = [
+    { arabic: 10, roman: 'X' },
+    { arabic: 9, roman: 'IX' },
+    { arabic: 5, roman: 'V'  },
+    { arabic: 4, roman: 'IV' },
+    { arabic: 1, roman: 'I'  } ]
 
   constructor: (number) ->
-    if number of numerals
-      @numeral = numerals[number]
-    else
+    if number < 1 or number > 5000
       throw new Error "Romans go home!"
+    else
+      remaining = number
+      string = ''
+      for i in numerals
+        while remaining >= i.arabic
+          string = string + i.roman
+          remaining = remaining - i.arabic
+      @numeral = string
 
 exports.Roman = Roman
