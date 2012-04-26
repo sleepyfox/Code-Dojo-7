@@ -17,6 +17,9 @@ describe 'What have the Romans done for us?', ->
    it '4 should be IV', ->
     roman = new Roman 4
     expect(roman.numeral).toEqual 'IV'
+   it '5 should be V', ->
+    roman = new Roman 5
+    expect(roman.numeral).toEqual 'V'
 
 
 class Roman
