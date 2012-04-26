@@ -21,7 +21,9 @@ describe 'What have the Romans done for us?', ->
 
 class Roman
   constructor: (number) ->
-    if number > 0
+    if number is 4
+      @numeral = 'IV'
+    else if 4 > number > 0
       for i in [1..number]
         @numeral = (@numeral ? '') + 'I'
     else
