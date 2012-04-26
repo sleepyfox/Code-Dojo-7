@@ -7,11 +7,11 @@ describe 'What have the Romans done for us?', ->
       roman = new Roman 0
       expect(true).toBeFalsy()
     catch error  
-      expect(true).toBeTruthy()
+      expect(error.message).toEqual "Romans go home!"
 
 class Roman
   constructor: (number) ->
     if number is 1
       @numeral = 'I'
     else
-      throw "Romans go home!"
+      throw new Error "Romans go home!"
