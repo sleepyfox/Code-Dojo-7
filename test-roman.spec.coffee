@@ -40,5 +40,15 @@ describe 'What have the Romans done for us?', ->
    it '37 should be XXXVII', ->
     roman = new Roman 37
     expect(roman.numeral).toEqual 'XXXVII'
+   it '99 should be XCIX', ->
+    roman = new Roman 99
+    expect(roman.numeral).toEqual 'XCIX'
+   it '399 should be CCCXCIX', ->
+    roman = new Roman 399
+    expect(roman.numeral).toEqual 'CCCXCIX'
+   it '1999 should be MCMXCIX', ->
+    roman = new Roman 1999
+    expect(roman.numeral).toEqual 'MCMXCIX'
+
 
 
