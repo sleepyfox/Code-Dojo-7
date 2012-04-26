@@ -1,3 +1,5 @@
+Roman = (require './roman').Roman
+
 describe 'What have the Romans done for us?', ->
   it '0 should throw an error', ->
     try
@@ -20,13 +22,7 @@ describe 'What have the Romans done for us?', ->
    it '5 should be V', ->
     roman = new Roman 5
     expect(roman.numeral).toEqual 'V'
+   it '6 should be VI', ->
+    roman = new Roman 6
+    expect(roman.numeral).toEqual 'VI'
 
-
-class Roman
-  numerals = { 5:'V', 4:'IV', 3:'III', 2:'II', 1:'I' }
-
-  constructor: (number) ->
-    if number of numerals
-      @numeral = numerals[number]
-    else
-      throw new Error "Romans go home!"
