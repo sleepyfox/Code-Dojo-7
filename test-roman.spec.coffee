@@ -23,11 +23,10 @@ describe 'What have the Romans done for us?', ->
 
 
 class Roman
+  numerals = { 5:'V', 4:'IV', 3:'III', 2:'II', 1:'I' }
+
   constructor: (number) ->
-    if number is 4
-      @numeral = 'IV'
-    else if 4 > number > 0
-      for i in [1..number]
-        @numeral = (@numeral ? '') + 'I'
+    if number of numerals
+      @numeral = numerals[number]
     else
       throw new Error "Romans go home!"
