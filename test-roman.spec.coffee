@@ -8,9 +8,12 @@ describe 'What have the Romans done for us?', ->
       expect(true).toBeFalsy()
     catch error
       expect(error.message).toEqual "Romans go home!"
-  it '2 should be II', ->
+   it '2 should be II', ->
     roman = new Roman 2
     expect(roman.numeral).toEqual 'II'
+   it '3 should be III', ->
+    roman = new Roman 3
+    expect(roman.numeral).toEqual 'III'
 
 
 class Roman
