@@ -22,5 +22,7 @@ class Roman
       @numeral = 'I'
     else if number is 2
       @numeral = 'II'
+    else if number is 3
+      @numeral = 'III'
     else
       throw new Error "Romans go home!"
