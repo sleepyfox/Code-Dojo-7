@@ -28,6 +28,7 @@ class Roman
 
 exports.Roman = Roman
 
+# Alternative implementation extends Number
 Number.prototype.roman = -> 
   numerals = [
       { arabic: 1000, roman: 'M' },

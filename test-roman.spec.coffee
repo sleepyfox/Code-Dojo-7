@@ -47,5 +47,9 @@ describe 'What have the Romans done for us?', ->
     roman = new Roman 1999
     expect(roman.numeral).to.equal 'MCMXCIX'
 
+describe 'A Number 7', ->
+  it 'should have a numeral VII', ->
+    expect(7.roman()).to.equal 'VII'
+
 
 
