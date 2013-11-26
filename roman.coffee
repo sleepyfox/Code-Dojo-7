@@ -14,17 +14,19 @@ class Roman
     { arabic: 4, roman: 'IV'   },
     { arabic: 1, roman: 'I'    } ]
 
-  constructor: (number) ->
+  guard = (number) ->
     if number < 1 or number > 5000
       throw new Error "Romans go home!"
-    else
-      remaining = number
-      string = ''
-      for i in numerals
-        while remaining >= i.arabic
-          string = string + i.roman
-          remaining = remaining - i.arabic
-      @numeral = string
+   
+  constructor: (number) ->
+    guard number
+    remaining = number
+    string = ''
+    for index in numerals
+      while remaining >= index.arabic
+        string = string + index.roman
+        remaining = remaining - index.arabic
+    @numeral = string
 
 exports.Roman = Roman
 
@@ -45,13 +47,12 @@ Number.prototype.roman = ->
       { arabic: 4, roman: 'IV'   },
       { arabic: 1, roman: 'I'    } ]
 
-  if this < 1 or this > 5000
-    throw new Error "Romans go home!"
-  else
-    remaining = this
-    string = ''
-    for i in numerals
-      while remaining >= i.arabic
-        string = string + i.roman
-        remaining = remaining - i.arabic
-    @numeral = string
+  if @ < 1 or @ > 5000 then throw new Error "Romans go home!"
+     
+  remaining = this
+  string = ''
+  for i in numerals
+    while remaining >= i.arabic
+      string = string + i.roman
+      remaining = remaining - i.arabic
+  @numeral = string
