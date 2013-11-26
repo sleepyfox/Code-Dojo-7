@@ -1,0 +1,15 @@
+{
+  "name": "07-Roman",
+  "version": "0.0.1",
+  "description": "A code example based upon Roman numeral kata",
+  "scripts": {
+    "test": "mocha -w --compilers coffee:coffee-script -R spec test-*.coffee"
+  },
+  "author": "@sleepyfox",
+  "license": "see LICENSE file",
+  "dependencies": {
+    "coffee-script": "~1.6.3",
+    "mocha": "~1.13.0",
+    "chai": "~1.8.0"
+  }
+}
