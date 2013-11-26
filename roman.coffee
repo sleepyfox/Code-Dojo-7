@@ -51,8 +51,8 @@ Number.prototype.roman = ->
      
   remaining = this
   string = ''
-  for i in numerals
-    while remaining >= i.arabic
-      string = string + i.roman
-      remaining = remaining - i.arabic
+  for index in numerals
+    while remaining >= index.arabic
+      string = string + index.roman
+      remaining = remaining - index.arabic
   @numeral = string
